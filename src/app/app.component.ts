@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,27 @@ export class AppComponent {
   title = 'Angular WebComponentes teste';
 
   name = 'John Doe';
-  isActive = false;
-  isDisabled = false;
+  // isActive = false;
+  // isDisabled = false;
+
+  onInputChange(newValue: string) {
+    console.log('Valor atualizado: ', newValue);
+    this.name = newValue;
+  }
+
+  registrationForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  onSubmit() {
+    console.log(this.registrationForm.value);
+  }
+
+  updateRegistryForm() {
+    this.registrationForm.patchValue({
+      name: 'Bob',
+    });
+  }
 }
