@@ -39,7 +39,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@govbr-ds/core/dist/core.min.css"
             ],
             "scripts": []
           },
@@ -105,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "015da3b9-ea3f-4409-9eb9-48386ecad758"
   }
 }
