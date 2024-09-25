@@ -231,23 +231,13 @@
       <div>
         <h1>With ngModel</h1>
         <hr />
-        <br-input
-          [value]="name"
-          [(ngModel)]="name"
-          (valueChange)="onInputChange($event.detail)"
-        ></br-input>
+        <br-input [value]="name" [(ngModel)]="name" ngDefaultControl></br-input>
         <p>Meu nome:{{ name }}</p>
       </div>
 
       <div>
         <h1>Reactive Form</h1>
         <hr />
-        <br-input
-          [value]="name"
-          [(ngModel)]="name"
-          (valueChange)="onInputChange($event.detail)"
-        ></br-input>
-        <p>Meu nome:{{ name }}</p>
 
         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
           <br-input
