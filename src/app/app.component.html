@@ -231,8 +231,24 @@
       <div>
         <h1>With ngModel</h1>
         <hr />
-        <br-input [value]="name" [(ngModel)]="name" ngDefaultControl></br-input>
-        <p>Meu nome:{{ name }}</p>
+        <br-input
+          [value]="name"
+          [(ngModel)]="name"
+          label="Nome"
+          ngDefaultControl
+        ></br-input>
+        <p style="margin-top: 0px; margin-bottom: 10px; font-size: 12px">
+          Meu nome: <strong>{{ name }}</strong>
+        </p>
+
+        <br-input id="button" label="Pesquisar" placeholder="Pesquisar">
+          <br-icon
+            slot="action"
+            icon-name="fa-solid:search"
+            height="16"
+            aria-hidden="true"
+          ></br-icon>
+        </br-input>
       </div>
 
       <div>
