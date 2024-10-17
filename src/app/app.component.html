@@ -241,12 +241,34 @@
           Meu nome: <strong>{{ name }}</strong>
         </p>
 
-        <br-input id="button" label="Pesquisar" placeholder="Pesquisar">
+        <br-input
+          id="button"
+          label="Pesquisar"
+          placeholder="Pesquisar"
+          onclick="console.log('cliquei no input')"
+        >
           <br-icon
             slot="action"
             icon-name="fa-solid:search"
             height="16"
             aria-hidden="true"
+            onclick="console.log('cliquei no botão')"
+          ></br-icon>
+        </br-input>
+        <br />
+        <br />
+        <br-input
+          is-inline
+          label="Label inline com icone a direita"
+          placeholder="Pesquisar"
+          onclick="console.log('cliquei no input')"
+        >
+          <br-icon
+            slot="action"
+            icon-name="fa-solid:search"
+            height="16"
+            aria-hidden="true"
+            onclick="console.log('cliquei no botão')"
           ></br-icon>
         </br-input>
       </div>
