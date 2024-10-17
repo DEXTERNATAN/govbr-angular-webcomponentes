@@ -226,7 +226,17 @@
         </defs>
       </svg>
       <h1>GovBR, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <br />
+      <!-- <p>Congratulations! Your app is running. 🎉</p> -->
+
+      <br-message
+        message-title="Informação"
+        is-closable
+        show-icon
+        aria-label="Mensagem do aria-label para acessibilidade"
+      >
+        <span>Essa é uma aplicação de testes dos web components do govbr.</span>
+      </br-message>
 
       <div>
         <h1>With ngModel</h1>
@@ -255,6 +265,13 @@
             onclick="console.log('cliquei no botão')"
           ></br-icon>
         </br-input>
+        <br-message
+          state="warning"
+          is-feedback
+          message="O campo de pesquisa nao pode ficar vazio"
+          show-icon
+          aria-label="O campo de pesquisa nao pode ficar vazio"
+        ></br-message>
         <br />
         <br />
         <br-input
@@ -278,6 +295,13 @@
           placeholder="Data final"
           onclick="console.log('cliquei no input')"
         ></br-input>
+        <br-message
+          state="danger"
+          is-feedback
+          message="A data está inválida"
+          show-icon
+          aria-label="A data está inválida"
+        ></br-message>
       </div>
 
       <div>
