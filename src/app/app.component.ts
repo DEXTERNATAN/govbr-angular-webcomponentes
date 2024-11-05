@@ -31,10 +31,7 @@ export class AppComponent {
   onTeste(event: Event) {
     event.stopPropagation();
 
-    if (!event.defaultPrevented) {
-      // Verifica se o evento não foi prevenido
-      alert('onTeste');
-    }
+    alert('onTeste');
   }
 
   updateRegistryForm() {
