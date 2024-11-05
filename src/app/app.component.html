@@ -246,9 +246,22 @@
           [(ngModel)]="name"
           label="Nome"
           ngDefaultControl
+          onClick="onTeste"
         ></br-input>
         <p style="margin-top: 0px; margin-bottom: 10px; font-size: 12px">
           Meu nome: <strong>{{ name }}</strong>
+        </p>
+
+        <br-switch
+          label="Nome"
+          ngDefaultControl
+          [(ngModel)]="isActive"
+          (click)="onTeste($event)"
+        ></br-switch>
+
+        <!-- [ngModelOptions]="{ standalone: false }" -->
+        <p style="margin-top: 0px; margin-bottom: 10px; font-size: 12px">
+          valor do switch: <strong>{{ isActive }}</strong>
         </p>
 
         <br-input

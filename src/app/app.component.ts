@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Angular WebComponentes teste';
 
   name = 'John Doe';
-  // isActive = false;
+  isActive = false;
   // isDisabled = false;
 
   onInputChange(newValue: string) {
@@ -26,6 +26,15 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.registrationForm.value);
+  }
+
+  onTeste(event: Event) {
+    event.stopPropagation();
+
+    if (!event.defaultPrevented) {
+      // Verifica se o evento não foi prevenido
+      alert('onTeste');
+    }
   }
 
   updateRegistryForm() {
