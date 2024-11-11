@@ -22,18 +22,22 @@ export class AppComponent {
     name: new FormControl('', Validators.required),
     email: new FormControl(''),
     password: new FormControl(''),
-    status: new FormControl(false),
   });
-
-  // Esse método captura o valor do `checked` sempre que `brDidCheckedChange` é emitido
-  onCheckedChange(event: CustomEvent<boolean>): void {
-    const isChecked = event.detail;
-    console.log('Switch checked status:', isChecked);
-    this.isActive = isChecked;
-  }
 
   onSubmit() {
     console.log(this.registrationForm.value);
+  }
+
+  onTeste(event: Event) {
+    event.stopPropagation();
+
+    alert('onTeste');
+  }
+
+  exibirNotasConcluidas(event: Event) {
+    const target = event.target as HTMLElement;
+    const detail = target['detail'];
+    console.log('exibirNotasConcluidas', detail);
   }
 
   updateRegistryForm() {
@@ -41,4 +45,4 @@ export class AppComponent {
       name: 'Bob',
     });
   }
-}
+} 

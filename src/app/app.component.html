@@ -253,10 +253,8 @@
         </p>
 
         <br-switch
-          label="Nome"
-          ngDefaultControl
-          [(ngModel)]="isActive"
-          (click)="onTeste($event)"
+          label="Aceito os termos do servicos"
+          (brDidCheckedChange)="onCheckedChange($event)"
         ></br-switch>
 
         <!-- [ngModelOptions]="{ standalone: false }" -->
@@ -341,6 +339,12 @@
             type="password"
             formControlName="password"
           ></br-input>
+
+          <br-switch
+            ngDefaultControl
+            formControlName="status"
+            label="Aceito os termos do servicos"
+          ></br-switch>
 
           <div class="row mt-3">
             <div class="col-auto">
