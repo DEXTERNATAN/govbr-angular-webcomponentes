@@ -1,13 +1,12 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+// Importação do Webcomponents Angular do GovBR
+import { WebcomponentsAngularModule } from '@govbr-ds/webcomponents-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Importação do Webcomponents Angular do GovBR
-import { WebcomponentsAngularModule } from '@govbr-ds/webcomponents-angular';
 import '@govbr-ds/core/dist/core.min.css';
 
 @NgModule({
